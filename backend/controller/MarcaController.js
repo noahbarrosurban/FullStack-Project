@@ -17,11 +17,7 @@ class MarcaController {
     static async Create(req, res) {
         try {
             const { Nome } = req.body;
-
-            const marca = await ModelMarca.create({
-                Nome
-            });
-
+            const marca = await ModelMarca.create({ Nome });
             return res.status(201).send(marca);
         } catch (error) {
             console.error('Erro na Create', error);
@@ -41,7 +37,6 @@ class MarcaController {
             }
     
             marca.Nome = Nome || marca.Nome; // Atualiza o nome se fornecido
-    
             await marca.save(); // Salva as alterações
             return res.status(200).send(marca); // Retorna a marca atualizada
         } catch (error) {
@@ -49,18 +44,15 @@ class MarcaController {
             return res.status(500).send({ message: 'Erro ao atualizar marca' });
         }
     }
-    
 
     // Obter uma marca específica por Código
     static async GetOne(req, res) {
         try {
             const { CodigoMarca } = req.params;
-
             const marca = await ModelMarca.findByPk(CodigoMarca);
             if (!marca) {
                 return res.status(404).send({ message: 'Marca não encontrada' });
             }
-
             return res.status(200).send(marca);
         } catch (error) {
             console.error('Erro na GetOne', error);
@@ -72,12 +64,11 @@ class MarcaController {
     static async Delete(req, res) {
         try {
             const { CodigoMarca } = req.params; // Pegue o CodigoMarca dos parâmetros da URL
-    
             const marca = await ModelMarca.findByPk(CodigoMarca);
             if (!marca) {
                 return res.status(404).send({ message: 'Marca não encontrada' });
             }
-    
+
             // Verifica se há carros associados a esta marca
             const carros = await ModelCarro.findAll({ where: { MarcaId: CodigoMarca } });
             if (carros.length > 0) {
@@ -91,5 +82,6 @@ class MarcaController {
             return res.status(500).send({ message: 'Erro ao deletar marca' });
         }
     }
-    
 }
+
+module.exports = MarcaController;

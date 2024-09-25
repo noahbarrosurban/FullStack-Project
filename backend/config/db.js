@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const database = new Sequelize('React', 'teste', 'teste', {
-    dialect: 'mysql', host: 'localhost', port: 30000
+    dialect: 'mssql', host: 'localhost', port: 49928
 });
 
 database.sync();
