@@ -31,6 +31,6 @@ Carro.init(
     }
 );
 
-Carro.belongsTo(Marca, {foreignKey: {name: 'MarcaId', allowNull: false}, as : 'Marca'});
+Carro.belongsTo(Marca, {foreignKey: {name: 'MarcaId', allowNull: false}, as : 'marca'});
 
 module.exports = Carro;

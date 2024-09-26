@@ -1,0 +1,47 @@
+.nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(12, 12, 181);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos itens do menu de navegação */
+.navItem {
+    color: rgb(12, 12, 181);
+    border-radius: 10px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px; /* Espaçamento entre os itens */
+    padding: 10px 15px; /* Adiciona padding interno */
+    transition: background-color 0.3s ease; /* Suaviza a mudança de cor */
+}
+
+/* Efeito hover nos itens do menu */
+.navItem:hover {
+    background-color: rgba(12, 12, 181, 0.1); /* Fundo levemente azul ao passar o mouse */
+}
+
+/* Estilo dos links */
+.navItem a {
+    text-decoration: none;
+    color: rgb(12, 12, 181);
+    font-weight: bold;
+    transition: color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
+}
+
+/* Efeito hover nos links */
+.navItem a:hover {
+    color: rgb(0, 0, 139); /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Remove a mudança de cor após visitar os links */
+.navItem a:visited {
+    color: rgb(12, 12, 181);
+}

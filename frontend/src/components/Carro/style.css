@@ -1,0 +1,67 @@
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+.card-container {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 30%;
+    float: left;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    flex: 1 1 calc(33% - 1rem);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.card .action-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    width:50%;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove sublinhado no link */
+    display: inline-block; /* Faz o Link se comportar como botão */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
